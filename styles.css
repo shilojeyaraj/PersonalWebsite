@@ -361,6 +361,7 @@ html {
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px; /* Add padding for better mobile spacing */
 }
 
 /* LEFT SIDE - PROFILE PICTURE */
@@ -368,15 +369,18 @@ html {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 400px; /* Add a max-width to prevent it from getting too large */
 }
 
 .about-pic {
-  width: 300px; /* Increase the width */
-  height: 300px; /* Set the height to match the width for a square */
-  max-width: 100%;
-  border-radius: 50%; /* Make the image circular */
+  width: auto; /* Let the image determine its width */
+  height: auto; /* Let the image determine its height */
+  max-width: 100%; /* Ensure it doesn't overflow container */
+  object-fit: contain; /* Keep original aspect ratio */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 5px solid #1a3d5d; /* Add a circular border */
+  border: 5px solid #1a3d5d;
 }
 
 /* RIGHT SIDE - TEXT BOX */
@@ -403,13 +407,15 @@ html {
 
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {
-  .about-container {
-      flex-direction: column;
-      text-align: center;
+  .section__pic-container {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto; /* Center on mobile */
   }
-
-  .about-textbox {
-      text-align: center;
+  
+  .about-container {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
