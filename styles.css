@@ -820,8 +820,9 @@ section {
 .animated-bitmoji {
   width: 300px; /* Increase size */
   position: absolute; 
-  left: 60%; /* Move it more towards the center */
-  top: 25%;
+  left: 250%; /* Move it more towards the center */
+  top: 50%;
+  transform: translateY(25%);
 }
 .animated-bitmoji img {
   image-rendering: crisp-edges; /* Sharpens pixels */
