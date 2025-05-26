@@ -664,62 +664,27 @@ html {
 }
 
 #project-details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 20px;
-  background: linear-gradient(180deg, #000000 70%, #1a3d5d);
-  color: white;
-  width: 100%;
-  max-width: 1575px;
-}
-
-
-#project-details img {
-  width: 60%;
-  max-width: 600px;
-  border-radius: 10px;
-  margin: 20px 0;
-}
-
-.back-button {
-  display: block;
-  margin-top: 20px;
-  color: var(--first-color);
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.back-button:hover {
-  text-decoration: underline;
-}
-
-/* sCROLL */
-
-html {
-  scroll-behavior: smooth;
-}
-#project-details {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
+  display: grid;
+  place-items: center;
+  height: 100vh;
   background: linear-gradient(180deg, #000000 70%, #1a3d5d);
   padding: 20px;
   color: white;
-  width: 100%;
+  width: 100vw;
   max-width: 1575px;
 }
 
 .project-box {
-  width: 50%; /* Adjust the width to make the text box less wide */
+  width: 50%;
   background-color: #151414;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  text-align: left;
+  text-align: center; /* <-- Use center, not middle */
   border: 2px solid #292828;
+  margin: 0 auto; /* Optional: helps on smaller screens */
 }
+
 .project-image-container {
   width: 50%; /* Adjust the width to balance the layout */
   display: flex;
